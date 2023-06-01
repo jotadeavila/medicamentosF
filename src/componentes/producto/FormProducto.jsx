@@ -4,7 +4,7 @@ import Alert from 'react-bootstrap/Alert';
 import {useForm} from 'react-hook-form'
 import { useEffect, useState } from 'react';
 
-function FormProducto({productoEditar, nombre}) {
+function FormProducto({cerrar, productoEditar, nombre}) {
 
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [prod, setProd] = useState(productoEditar ? productoEditar : '');
@@ -32,6 +32,7 @@ function FormProducto({productoEditar, nombre}) {
     const resultado = await response.json();
     console.log(response.status)
     console.log(resultado)
+    cerrar()
   }
 
   return (

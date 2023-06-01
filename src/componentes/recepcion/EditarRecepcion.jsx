@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+
 import Modal from 'react-bootstrap/Modal';
-import FormProducto from './FormProducto';
+import FormRecepcion from './FormRecepcion';
 
 function Editar({producto, show, handleClose}) {
 
@@ -10,11 +8,11 @@ function Editar({producto, show, handleClose}) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Actualizar producto</Modal.Title>
+          <Modal.Title>Actualizar recepción</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            {console.log('desde modal'+producto.nombre)}
-            <FormProducto cerrar={handleClose} productoEditar={producto} nombre={'editar'}/>
+            {console.log('desde modal'+producto.id)}
+            <FormRecepcion cerrar={handleClose} proveedorEditar={producto} nombre={'editar'}/>
         </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

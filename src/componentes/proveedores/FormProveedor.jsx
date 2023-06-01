@@ -4,7 +4,7 @@ import Alert from 'react-bootstrap/Alert';
 import {useForm} from 'react-hook-form'
 import { useEffect, useState } from 'react';
 
-function FormProveedor({proveedorEditar, nombre}) {
+function FormProveedor({cerrar, proveedorEditar, nombre}) {
 
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [prov, setProv] = useState(proveedorEditar ? proveedorEditar : '');
@@ -32,6 +32,7 @@ function FormProveedor({proveedorEditar, nombre}) {
     const resultado = await response.json();
     console.log(response.status)
     console.log(resultado)
+    cerrar()
   }
 
   return (

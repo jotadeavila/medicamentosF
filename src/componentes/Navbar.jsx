@@ -22,8 +22,11 @@ function NavbarJ() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="/proveedores">Ver listado</NavDropdown.Item>
             </NavDropdown>
-            
-            <Nav.Link href="/recepcion">Recepción</Nav.Link>
+            <NavDropdown title="Recepciones" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/agregar-recepcion">Agregar</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/recepciones">Ver listado</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Container>
       </Navbar>     

@@ -12,7 +12,7 @@ function Editar({producto, show, handleClose}) {
         </Modal.Header>
         <Modal.Body>
             {console.log('desde modal'+producto.id)}
-            <FormProveedor proveedorEditar={producto} nombre={'editar'}/>
+            <FormProveedor cerrar={handleClose} proveedorEditar={producto} nombre={'editar'}/>
         </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
